@@ -1,0 +1,30 @@
+{
+  "name": "starter-kit-bun-hono",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "author": {
+    "name": "Selva",
+    "url": "https://github.com/slvssb"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {
+    "dayjs": "^1.11.18",
+    "drizzle-kit": "^0.31.5",
+    "drizzle-orm": "^0.44.6",
+    "drizzle-valibot": "^0.4.2",
+    "hono": "^4.9.12",
+    "postgres": "^3.4.7",
+    "uuidv7": "^1.0.2",
+    "valibot": "^1.1.0"
+  },
+  "packageManager": "bun@1.3.0",
+  "scripts": {
+    "dev": "dotenvx run -qf .env.development -- bun run --hot src/server.ts",
+    "build": "bun build --compile --minify-whitespace --minify-syntax --sourcemap --target bun --outfile dist/server ./src/index.ts",
+    "studio": "dotenvx run -qf .env.development -- drizzle-kit studio"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.3.0"
+  }
+}
